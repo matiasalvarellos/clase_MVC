@@ -1,13 +1,18 @@
 const db = require("../database/models")
 
 module.exports = {
-  home: function(req, res){
-    res.render("index")
+  home:  function(req, res) {
+    res.render("index");
   },
-  contacto: function (req, res) {
+  contacto:  function(req, res) {
     res.render("contacto")
   },
-  listProducts: function(req,res){
+  list: async function(req, res){
+    //modelo
+    let products = await db.Product.findAll()
+
+    //vistas
+    res.render("products", {products})
     
   }
 
