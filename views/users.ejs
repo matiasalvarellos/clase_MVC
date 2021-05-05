@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <h1>Listado de Usuarios:</h1>
+    <ul>
+      <% if( typeof products !=undefined){ %>
+        <% users.forEach(user => { %>
+          <li>
+            Nombre:<%= user.name %>
+          </li>
+          <li>
+            Apellido:<% user.last_name %> 
+          </li>
+          <li>
+            edad:$<%= user.edad %>
+          </li>
+          <hr>
+        <% }) %>
+      <% } %>
+    </ul>
+
+
+  </body>
+</html>
